@@ -57,4 +57,4 @@ for item in data["items"]:
 car_massege = f"出包{car_accident_list}"
 
 lineTool.lineNotify(
-    "UcvSIOXpRcanKdXbf45xNHvDZ1CnSwkL0ANqBv2zBiA", car_massege)
+    "UcvSIOXpRcanKdXbf45xNHvDZ1CnSwkL0ANqBv2zBiA", "123")
