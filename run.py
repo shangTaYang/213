@@ -2,7 +2,9 @@ import lineTool
 import os
 import requests
 from datetime import datetime, timedelta, timezone, date
+import re
 
+chubao = r'''((出包)|(搞笑)|(失誤)|(滑稽)|(錯誤)|(挑戰)|(失敗)|(日常)|(尷尬)|(瞬間)|(爆笑)|(惡作劇)).*?'''
 
 class YoutubeSpider():
     def __init__(self, api_key):
@@ -51,7 +53,10 @@ for item in data["items"]:
     dic["author"] = item["snippet"]["channelTitle"]
     channel_id = item["snippet"]["channelId"]
     channel_data = spider.search_channel(channel_id)
-    car_accident_list.append(dic)
+    subscriberCount = channel_data["items"][0]["statistics"]["subscriberCount"]
+    if int(subscriberCount) < 2000:
+       if re.search(chubao, dic["title"]):
+            car_accident_list.append(dic)
 
 
 car_massege = f"出包{car_accident_list}"
