@@ -36,7 +36,7 @@ past_hour = timedelta(hours=1)
 published_after = (now - past_hour).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 # 初始化爬蟲物件並搜尋符合條件的影片
-spider = YoutubeSpider("AIzaSyAJFruuvplYGxgAQfaeRngmh2TelGcFF9w")
+spider = YoutubeSpider(os.getenv('API_KEY'))
 query = "出包"
 data = spider.search_videos(query, published_after)
 car_accident_list = []
@@ -55,6 +55,4 @@ for item in data["items"]:
 
 
 car_massege = f"出包{car_accident_list}"
-
-lineTool.lineNotify(
-    "UcvSIOXpRcanKdXbf45xNHvDZ1CnSwkL0ANqBv2zBiA", "123")
+lineTool.lineNotify(os.getenv('token'), car_massege)
