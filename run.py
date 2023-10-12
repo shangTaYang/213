@@ -54,5 +54,5 @@ for item in data["items"]:
     car_accident_list.append(dic)
 
 
-# car_massege = f"出包{car_accident_list}"
-lineTool.lineNotify(os.getenv('token'), " car_massege")
+car_massege = f"出包{car_accident_list}"
+lineTool.lineNotify(os.getenv('token'), car_massege)
