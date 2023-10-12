@@ -4,7 +4,8 @@ import requests
 from datetime import datetime, timedelta, timezone, date
 import re
 
-chubao = r'''((出包)|(搞笑)|(失誤)|(滑稽)|(錯誤)|(挑戰)|(失敗)|(日常)|(尷尬)|(瞬間)|(爆笑)|(惡作劇)).*?'''
+chubao = r'''((出包)|(搞笑)|(失誤)|(滑稽)|(錯誤)|(挑戰)|(失敗)|(趣味)|
+(尷尬)|(瞬間)|(爆笑)|(惡作劇)).*?'''
 
 class YoutubeSpider():
     def __init__(self, api_key):
