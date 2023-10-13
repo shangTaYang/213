@@ -56,8 +56,8 @@ for item in data["items"]:
     channel_data = spider.search_channel(channel_id)
     # subscriberCount = channel_data["items"][0]["statistics"]["subscriberCount"]
     # if int(subscriberCount) < 2000:
-   if re.search(chubao, dic["title"]):
-       car_accident_list.append(dic)
+    if re.search(chubao, dic["title"]):
+        car_accident_list.append(dic)
 
 
 car_massege = f"出包{car_accident_list}"
