@@ -3,3 +3,4 @@ requests
 datetime
 BeautifulSoup4
 datetime
+feedparser
