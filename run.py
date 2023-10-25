@@ -15,4 +15,4 @@ def search_no():
     for index, entry in enumerate(feed.entries):
       if index <5:
         # print(f'第{index+1}名:{entry.title}\n相關新聞:{entry.ht_news_item_title}',end='\n\n')
-        lineTool.lineNotify(os.getenv('token'), f'第{index+1}名:{entry.title}\n相關新聞:{entry.ht_news_item_title}',end='\n\n')
+        lineTool.lineNotify(os.getenv('token'), f'第{index+1}名:{entry.title}\n相關新聞:{entry.ht_news_item_title}')
