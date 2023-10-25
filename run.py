@@ -14,7 +14,7 @@ def search_no():
     print(now_all+"熱搜排行")
     for index, entry in enumerate(feed.entries):
       if index <5:
-        # print(f'第{index+1}名:{entry.title}\n相關新聞:{entry.ht_news_item_title}',end='\n\n')
-        lineTool.lineNotify(os.getenv('token'), f'第{index+1}名:{entry.title}\n相關新聞:{entry.ht_news_item_title}')
+        m = f'第{index+1}名:{entry.title}\n相關新聞:{entry.ht_news_item_title}',end='\n\n'
+        lineTool.lineNotify(os.getenv('token'), m)
 if (datetime.utcnow() + timedelta(hours=8)).strftime("%H") == "9" :
     search_no()
