@@ -75,7 +75,7 @@ def International_news_job():
         sbb = title + url 
         lineTool.lineNotify(os.getenv('token'), sbb)
 
-chubao = r'''((出包)|(糗)|(笑死)|(丟臉)|(尷尬)|(錯誤)|(出糗)|(失誤)|(安全))'''
+chubao = r'''((出包)|(糗)|(笑死)|(丟臉)|(尷尬)|(錯誤)|(出糗)|(失誤))'''
 
   
 today = date.today()
@@ -87,8 +87,7 @@ International_news = f'{ettday}/news-list-{today}-2.htm'
   
 
 
-if (datetime.utcnow() + timedelta(hours=8)).strftime("%H") in "01" :
-    china_news_job()
-    social_news_job()
-    Local_news_job()
-    International_news_job()
+china_news_job()
+social_news_job()
+Local_news_job()
+International_news_job()
