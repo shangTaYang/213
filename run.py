@@ -31,7 +31,6 @@ def get_ettoday_social_news_url(url):
 
 def china_news_job():
   china_news = get_ettoday_social_news_url(f'{ettday}/news-list-{today}-3.htm')
-  del china_news[2:] 
   # china_news是字串包字典 [{title:123,url:123},....]
   for i in china_news:  # 取出每個字典 i = {title:123,url:123}
     title = i["title"]
@@ -43,7 +42,6 @@ def china_news_job():
 def social_news_job():
   social_news = get_ettoday_social_news_url(
     f'{ettday}/news-list-{today}-6.htm')
-  del social_news[2:]
   # china_news是字串包字典 [{title:123,url:123},....]
   for i in social_news:  # 取出每個字典 i = {title:123,url:123}
     title = i["title"]
@@ -54,7 +52,6 @@ def social_news_job():
 
 def Local_news_job():
   Local_news = get_ettoday_social_news_url(f'{ettday}/news-list-{today}-7.htm')
-  del Local_news[2:]
   # china_news是字串包字典 [{title:123,url:123},....]
   for i in Local_news:  # 取出每個字典 i = {title:123,url:123}
     title = i["title"]
@@ -66,7 +63,6 @@ def Local_news_job():
 def International_news_job():
   International_news = get_ettoday_social_news_url(
     f'{ettday}/news-list-{today}-2.htm')
-  del International_news[2:]
   # china_news是字串包字典 [{title:123,url:123},....]
   for i in International_news:  # 取出每個字典 i = {title:123,url:123}
     title = i["title"]
