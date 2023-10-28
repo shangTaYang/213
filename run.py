@@ -82,8 +82,8 @@ Local_news = f'{ettday}/news-list-{today}-7.htm'
 International_news = f'{ettday}/news-list-{today}-2.htm'
   
 
-
-china_news_job()
-social_news_job()
-Local_news_job()
-International_news_job()
+if (datetime.utcnow() + timedelta(hours=8)).strftime("%H") in "12 18" :
+       china_news_job()
+       social_news_job()
+       Local_news_job()
+       International_news_job()
